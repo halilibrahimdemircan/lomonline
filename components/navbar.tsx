@@ -4,7 +4,7 @@ type Props = {};
 
 const navbar = (props: Props) => {
   return (
-    <div className="border w-full flex justify-between">
+    <div className="border w-full flex justify-between h-24 ">
       <div className="border">Icon</div>
       <div className="border">
         <ul className="flex gap-4">
