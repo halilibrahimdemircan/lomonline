@@ -15,9 +15,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         backgroundImage: "",
       }}
     >
-      <Background />
+      {<Background />}
       <Navbar />
-      <main className="h-full border border-red-600">{children}</main>
+      <main className="h-full ">{children}</main>
       {/* <Footer /> */}
     </div>
   );
