@@ -53,7 +53,9 @@ const navbar = (props: Props) => {
               <li
                 key={index}
                 className={`${
-                  currentPath == pathObj.path ? "text-orange-500" : ""
+                  currentPath == pathObj.path
+                    ? "text-orange-500  border-0 border-t border-orange-500 backdrop-blur-sm h-full flex justify-center items-center text-center"
+                    : ""
                 }`}
               >
                 <Link href={pathObj.path}>{pathObj.name}</Link>

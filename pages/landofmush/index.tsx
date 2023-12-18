@@ -36,7 +36,7 @@ const Landofmushpage: NextPage = () => {
   return (
     <>
       <div
-        style={{ height: "90% " }}
+        style={{ height: "100% " }}
         className="  flex flex-col justify-center items-center  gap-8"
       >
         <div className="flex flex-col justify-center text-center gap-4   mt-12">
@@ -59,7 +59,7 @@ const Landofmushpage: NextPage = () => {
           PLAY NOW
         </button>
       </div>
-      <div className="flex  items-center justify-center p-10 flex-col gap-6">
+      <div className="flex  items-center justify-center pb-10 px-10 flex-col gap-6">
         <h2 className={h2ClassName}>WATCH TRAILER</h2>
         <iframe
           className="w-3/4 h-[512px] rounded-xl"
