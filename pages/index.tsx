@@ -47,6 +47,7 @@ const Landofmushpage: NextPage = () => {
       <div style={{ height: "calc(100% - 84px)" }} className="flex">
         <div className="w-1/3 items-end justify-end flex">
           <Image
+            className="w-full"
             alt="Land of Mush Icon"
             src={warriorLeft}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

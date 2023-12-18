@@ -54,7 +54,7 @@ const navbar = (props: Props) => {
                 key={index}
                 className={`${
                   currentPath == pathObj.path
-                    ? "text-orange-500  border-0 border-t border-orange-500 backdrop-blur-sm h-full flex justify-center items-center text-center"
+                    ? "text-orange-500  border-0 border-t border-orange-500 backdrop-blur-lg h-full flex justify-center items-center text-center"
                     : ""
                 }`}
               >
