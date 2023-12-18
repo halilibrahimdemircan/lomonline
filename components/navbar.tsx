@@ -3,7 +3,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import icon from "../public/icon.png";
+import { Inter } from "next/font/google";
+
 type Props = {};
+const inter = Inter({ subsets: ["latin"] });
 
 const navbar = (props: Props) => {
   const router = useRouter();
@@ -43,7 +46,7 @@ const navbar = (props: Props) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <div className=" flex  h-[84px]">
+      <div className={`${inter.className} flex  h-[84px]`}>
         <ul className="flex gap-6  items-center justify-center">
           {pathList.map((pathObj, index) => {
             return (
