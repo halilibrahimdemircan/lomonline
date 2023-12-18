@@ -14,7 +14,7 @@ const navbar = (props: Props) => {
   console.log("currentPath :>> ", currentPath);
   const pathList = [
     {
-      path: "/home",
+      path: "/",
       name: "Homepage",
     },
     {
@@ -37,7 +37,7 @@ const navbar = (props: Props) => {
   return (
     <div
       style={{ height: "96px" }}
-      className=" w-full flex justify-between  text-gray-500 px-32"
+      className=" w-full flex justify-between  text-gray-500 px-32 bg-black"
     >
       <div className=" flex items-center">
         <Image

@@ -1,16 +1,13 @@
-import Image from "next/image";
-import background from "../public/background.png";
-import lmBackground2 from "../public/lmBackground2.png";
+import Image, { StaticImageData } from "next/image";
 
-import { useRouter } from "next/router";
-
-export default function Background() {
-  const router = useRouter();
-  const currentPath = router.pathname;
+type Props = {
+  src: StaticImageData;
+};
+export default function Background(props: Props) {
   return (
     <Image
       alt="background"
-      src={currentPath == "/landofmush" ? lmBackground2 : background}
+      src={props.src}
       placeholder="blur"
       quality={100}
       fill
