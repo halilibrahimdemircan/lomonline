@@ -8,11 +8,17 @@ import crafting from "../public/crafting.png";
 import footerBg from "../public/footerBg.png";
 import warriorLeft from "../public/warriorLeft.png";
 import warriorRight from "../public/warriorRight.png";
+import greenMush from "../public/greenMush.png";
+import mush1 from "../public/mush1.png";
+import warriorwsRight from "../public/warriorwsRight.png";
+import discordIcon from "../public/discordIcon.png";
 
 import { Cinzel, Roboto_Serif } from "next/font/google";
 
 import mush from "../public/mush.png";
 import LomElement from "../components/lomElement";
+import Background from "../components/background";
+import FooterBackground from "../components/footerBackground";
 const cinzel = Cinzel({ subsets: ["latin"] });
 const roboto = Roboto_Serif({ subsets: ["latin"] });
 
@@ -113,31 +119,66 @@ const Landofmushpage: NextPage = () => {
         <div className="flex justify-center items-center  text-center mt-3">
           {elementList.map((element, index) => {
             return (
-              <LomElement
-                text={element.text}
-                subText={element.subText}
-                src={element.src}
-              />
+              <div key={index}>
+                <LomElement
+                  text={element.text}
+                  subText={element.subText}
+                  src={element.src}
+                />
+              </div>
             );
           })}
         </div>
-        <div>
-          <div className=" w-full flex justify-center">
-            <Image
-              className=""
-              alt="Land of Mush Icon"
-              src={footerBg}
-              // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              placeholder="blur"
-              quality={100}
-              // fill
-              // sizes="100vw"
-              // style={{
-              //   objectFit: "cover",
-              // }}
-            />
+
+        <div className=" w-full h-full flex justify-center items-end">
+          <FooterBackground src={footerBg} />
+          <div className="w-full h-full flex justify-between ">
+            <div className="w-1/3 items-end justify-start flex">
+              <Image
+                className=""
+                alt="Land of Mush Icon"
+                src={greenMush}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+              <Image
+                className=""
+                alt="Land of Mush Icon"
+                src={mush1}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+            <div className="w-1/3 items-center justify-center flex flex-col gap-4">
+              <div>
+                <Image
+                  className=""
+                  alt="Land of Mush Icon"
+                  src={discordIcon}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div>
+                <h2 className={h2ClassName}>JOIN DISCORD</h2>
+              </div>
+              <div>
+                <h4 className={h4ClassName}>
+                  Here is the fantasy world waiting for you, ready and calling!
+                </h4>
+              </div>
+              <div>
+                <button className="rounded-lg bg-indigo-500 text-white px-4 py-2 shadow-indigo-500">
+                  Discord Community
+                </button>
+              </div>
+            </div>
+            <div className="w-1/3 items-end justify-end flex ">
+              <Image
+                className=""
+                alt="Land of Mush Icon"
+                src={warriorwsRight}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
           </div>
-          <button>JOIN</button>
         </div>
       </div>
     </>

@@ -6,6 +6,8 @@ import lomBlack from "../public/lomBlack.png";
 
 import Image from "next/image";
 import CustomButton from "./customButton";
+import x from "../public/x.png";
+
 const cinzel = Cinzel({ subsets: ["latin"] });
 
 type Props = {
@@ -85,6 +87,16 @@ export default function Modal({ open, setOpen }: Props) {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
+                  <div
+                    onClick={() => setOpen(false)}
+                    className="mx-auto flex items-center justify-center bg-orange-500 w-8 h-8 rounded-lg absolute right-2 top-2"
+                  >
+                    <Image
+                      alt="Land of Mush Icon"
+                      src={x}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
                   <div className="mt-3 text-center sm:mt-5">
                     {/* <Dialog.Title
                       as="h3"
@@ -110,12 +122,14 @@ export default function Modal({ open, setOpen }: Props) {
                   </button> */}
                   {buttons.map((button, index) => {
                     return (
-                      <CustomButton
-                        text={button.text}
-                        bg={button.bg}
-                        link={button.link}
-                        action={button.action}
-                      />
+                      <div key={index}>
+                        <CustomButton
+                          text={button.text}
+                          bg={button.bg}
+                          link={button.link}
+                          action={button.action}
+                        />
+                      </div>
                     );
                   })}
                 </div>

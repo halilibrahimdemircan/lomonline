@@ -13,12 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const router = useRouter();
   const currentPath = router.pathname;
   return (
-    <div
-      className="h-screen flex flex-col "
-      style={{
-        backgroundImage: "",
-      }}
-    >
+    <div className="h-screen flex flex-col ">
       {
         <Background
           src={currentPath == "/landofmush" ? closedBetaBg : background}
