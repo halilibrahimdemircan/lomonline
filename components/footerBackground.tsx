@@ -2,12 +2,10 @@ import Image, { StaticImageData } from "next/image";
 
 type Props = {
   src: StaticImageData;
-  //   style: string;
 };
 export default function FooterBackground(props: Props) {
   return (
     <Image
-      //   className={props.style}
       alt="background"
       src={props.src}
       placeholder="blur"

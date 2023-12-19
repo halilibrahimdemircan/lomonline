@@ -17,7 +17,6 @@ import { Cinzel, Roboto_Serif } from "next/font/google";
 
 import mush from "../public/mush.png";
 import LomElement from "../components/lomElement";
-import Background from "../components/background";
 import FooterBackground from "../components/footerBackground";
 const cinzel = Cinzel({ subsets: ["latin"] });
 const roboto = Roboto_Serif({ subsets: ["latin"] });

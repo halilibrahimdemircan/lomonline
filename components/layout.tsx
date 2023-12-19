@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import Navbar from "./navbar";
-import Footer from "./footer";
 import Background from "./background";
 import { useRouter } from "next/router";
 import background from "../public/background.png";
@@ -21,7 +20,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       }
       <Navbar />
       <main className="h-full ">{children}</main>
-      {/* <Footer /> */}
     </div>
   );
 };

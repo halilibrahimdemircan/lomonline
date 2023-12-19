@@ -15,11 +15,10 @@ const CustomButton = ({ text, bg, link, action }: Props) => {
         <hr className="my-3 mx-20"></hr>
       ) : (
         <button
+          onClick={action}
           className={`${bg} ${cinzel.className} text-[18px] leading-4 tracking-normal text-center w-full px-3 py-4 font-medium shadow-sm text-white my-2 rounded-md `}
         >
-          <a target="_blank" href={link}>
-            {text}
-          </a>
+          {text}
         </button>
       )}
     </div>
