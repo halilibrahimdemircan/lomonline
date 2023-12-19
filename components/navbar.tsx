@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import icon from "../public/icon.png";
 import { Inter } from "next/font/google";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 type Props = {};
 const inter = Inter({ subsets: ["latin"] });
@@ -11,7 +12,6 @@ const inter = Inter({ subsets: ["latin"] });
 const navbar = (props: Props) => {
   const router = useRouter();
   const currentPath = router.pathname;
-  console.log("currentPath :>> ", currentPath);
   const pathList = [
     {
       path: "/",
@@ -46,7 +46,10 @@ const navbar = (props: Props) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <div className={`${inter.className} flex  h-[84px]`}>
+      <div className={`${inter.className} flex  h-[84px] gap-4`}>
+        <div className="flex items-center">
+          <ConnectButton />
+        </div>
         <ul className="flex gap-6  items-center justify-center">
           {pathList.map((pathObj, index) => {
             return (
