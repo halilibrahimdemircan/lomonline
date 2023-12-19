@@ -20,9 +20,9 @@ import FooterBackground from "../components/footerBackground";
 const cinzel = Cinzel({ subsets: ["latin"] });
 const roboto = Roboto_Serif({ subsets: ["latin"] });
 
-const h2ClassName = `${cinzel.className} text-[32px] leading-12 font-medium tracking-tight`;
-const h3ClassName = `${cinzel.className} text-[24px] leading-12 font-medium tracking-tight`;
-const h4ClassName = `${roboto.className} text-[16px] leading-12 font-medium tracking-tight`;
+const h2ClassName = `${cinzel.className} text-[32px] leading-12 whitespace-nowrap `;
+const h3ClassName = `${cinzel.className} text-[24px] leading-12 whitespace-nowrap `;
+const h4ClassName = `${roboto.className} text-[16px] leading-12 whitespace-nowrap text-gray-500`;
 
 const Landofmushpage: NextPage = () => {
   const elementList = [
@@ -59,9 +59,9 @@ const Landofmushpage: NextPage = () => {
         </div>
         <div
           style={{ height: "calc(100% - 84px)" }}
-          className="w-1/3  flex flex-col justify-end items-center  gap-8  pb-12"
+          className="w-1/3  flex flex-col justify-center items-center  gap-8  pb-12  "
         >
-          <div className="flex flex-col justify-center text-center gap-4   ">
+          <div className="flex flex-col justify-center text-center gap-4  mt-44">
             <h3 className={h3ClassName}>
               A unique experience with unique dynamics
             </h3>
@@ -69,7 +69,7 @@ const Landofmushpage: NextPage = () => {
               Here is the fantasy world waiting for you, ready and calling!
             </h4>
           </div>
-          <button
+          {/* <button
             style={{
               borderRadius: "8px",
               background:
@@ -79,7 +79,7 @@ const Landofmushpage: NextPage = () => {
             className="text-white w-64 h-12 "
           >
             PLAY NOW
-          </button>
+          </button> */}
         </div>
         <div className="w-1/3 items-end justify-end flex">
           <Image
@@ -89,7 +89,7 @@ const Landofmushpage: NextPage = () => {
           />
         </div>
       </div>
-      <div className="flex  items-center justify-center pb-10 px-10 flex-col gap-6">
+      <div className="flex  items-center justify-center pt-16 pb-10 px-10 flex-col gap-6">
         <h2 className={h2ClassName}>WATCH TRAILER</h2>
         <iframe
           className="w-3/4 h-[512px] rounded-xl"
@@ -99,7 +99,7 @@ const Landofmushpage: NextPage = () => {
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
-        <h3 className={h3ClassName}>
+        <h3 className={`${h3ClassName} pt-6`}>
           A unique experience with unique dynamics
         </h3>
         <h4 className={h4ClassName}>
@@ -107,14 +107,14 @@ const Landofmushpage: NextPage = () => {
         </h4>
       </div>
 
-      <div className="flex flex-col gap-3 items-center justify-center">
+      <div className="flex flex-col gap-3 items-center justify-center pt-12">
         <Image
           alt="Land of Mush Icon"
           src={mush}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <h2 className={h2ClassName}>EXPERIENCES</h2>
-        <div className="flex justify-center items-center  text-center mt-3">
+        <div className="flex justify-center items-center  text-center mt-3 gap-8">
           {elementList.map((element, index) => {
             return (
               <div key={index}>
@@ -162,7 +162,7 @@ const Landofmushpage: NextPage = () => {
                   Here is the fantasy world waiting for you, ready and calling!
                 </h4>
               </div>
-              <div>
+              <div className="pt-3">
                 <button className="rounded-lg bg-indigo-500 text-white px-4 py-2 shadow-indigo-500">
                   Discord Community
                 </button>
