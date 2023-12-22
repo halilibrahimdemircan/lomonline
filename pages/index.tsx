@@ -61,7 +61,7 @@ const Landofmushpage: NextPage = () => {
           style={{ height: "calc(100% - 84px)" }}
           className="w-1/3  flex flex-col justify-center items-center  gap-8  pb-12  "
         >
-          <div className="flex flex-col justify-center text-center gap-4  mt-44">
+          <div className="flex flex-col justify-center text-center gap-4  pt-64">
             <h3 className={h3ClassName}>
               A unique experience with unique dynamics
             </h3>
@@ -69,7 +69,7 @@ const Landofmushpage: NextPage = () => {
               Here is the fantasy world waiting for you, ready and calling!
             </h4>
           </div>
-          {/* <button
+          <button
             style={{
               borderRadius: "8px",
               background:
@@ -79,7 +79,7 @@ const Landofmushpage: NextPage = () => {
             className="text-white w-64 h-12 "
           >
             PLAY NOW
-          </button> */}
+          </button>
         </div>
         <div className="w-1/3 items-end justify-end flex">
           <Image
