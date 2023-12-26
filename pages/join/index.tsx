@@ -7,7 +7,8 @@ const Joinpage: NextPage = () => {
       <iframe
         className="w-[962px] h-[640px] rounded"
         id="game_drop"
-        src="https://html-classic.itch.zone/html/9338311/webgl0x3a/index.html"
+        // src="https://html-classic.itch.zone/html/9338311/webgl0x3a/index.html"
+        src="https://html-classic.itch.zone/html/9384198/webl05/index.html"
         // frameBorder="0"
         // allowFullScreen={true}
         // scrolling="no"
