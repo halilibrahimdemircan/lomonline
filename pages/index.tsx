@@ -79,7 +79,7 @@ const Landofmushpage: NextPage = () => {
             }}
             className="text-white w-64 h-12 "
           >
-            PLAY NOW
+            Play Now
           </button> */}
           <LoginButton />
         </div>

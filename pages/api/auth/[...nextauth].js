@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import TwitterProvider from "next-auth/providers/twitter";
+import pool from "../../../lib/db";
 
 export const authOptions = {
   // Configure one or more authentication providers
@@ -15,6 +16,30 @@ export const authOptions = {
 
     // ...add more providers here
   ],
+  callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      console.log("user", user);
+      console.log("account :>> ", account);
+      console.log("profile :>> ", profile);
+      console.log("email :>> ", email);
+      console.log("credentials :>> ", credentials);
+      //   const { rows } = await pool.query("SELECT * FROM game_items_new");
+      //   console.log("sign in içinde :>> ", rows);
+      return true;
+    },
+    async redirect({ url, baseUrl }) {
+      //   console.log("redirectt");
+      return baseUrl;
+    },
+    async session({ session, user, token }) {
+      //   console.log("callbackkk session :>> ", session);
+      return session;
+    },
+    async jwt({ token, user, account, profile, isNewUser }) {
+      //   console.log("tokenn");
+      return token;
+    },
+  },
 };
 
 export default NextAuth(authOptions);
