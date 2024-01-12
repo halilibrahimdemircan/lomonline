@@ -17,6 +17,7 @@ import { Cinzel, Roboto_Serif } from "next/font/google";
 import mush from "../public/mush.png";
 import LomElement from "../components/lomElement";
 import FooterBackground from "../components/footerBackground";
+import LoginButton from "../components/loginButton";
 const cinzel = Cinzel({ subsets: ["latin"] });
 const roboto = Roboto_Serif({ subsets: ["latin"] });
 
@@ -69,7 +70,7 @@ const Landofmushpage: NextPage = () => {
               Here is the fantasy world waiting for you, ready and calling!
             </h4>
           </div>
-          <button
+          {/* <button
             style={{
               borderRadius: "8px",
               background:
@@ -79,7 +80,8 @@ const Landofmushpage: NextPage = () => {
             className="text-white w-64 h-12 "
           >
             PLAY NOW
-          </button>
+          </button> */}
+          <LoginButton />
         </div>
         <div className="w-1/3 items-end justify-end flex">
           <Image
