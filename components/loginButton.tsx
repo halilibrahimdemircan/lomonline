@@ -2,7 +2,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function LoginButton() {
   const { data: session } = useSession();
-  //   console.log("session :>> ", session);
+  console.log("session :>> ", session);
 
   if (session) {
     return (
@@ -35,7 +35,7 @@ export default function LoginButton() {
         className="text-white w-64 h-12 "
         onClick={() => signIn()}
       >
-        Sign in with Twitter
+        Sign in
       </button>
     </>
   );
